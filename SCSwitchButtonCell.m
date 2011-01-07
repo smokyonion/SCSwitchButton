@@ -17,6 +17,8 @@
 #define THUMB_GRADIENT_MIN_Y_WHITE 0.9f
 #define BACKGROUND_GRADIENT_MAX_Y_WHITE 0.50f
 #define BACKGROUND_GRADIENT_MIN_Y_WHITE 0.75f
+#define NSOFFSTATE_BACKGROUND_GRADIENT_MAX_WHITE 0.90f
+#define NSOFFSTATE_BACKGROUND_GRADIENT_MIN_WHITE 0.80f
 #define BORDER_WHITE 0.65f
 
 #define THUMB_SHADOW_WHITE 0.0f
@@ -122,8 +124,10 @@
 			
 			//Draw the background, then the frame.
 			NSBezierPath *borderPath = [NSBezierPath bezierPathWithRoundedRect:cellFrame xRadius:FRAME_CORNER_RADIUS yRadius:FRAME_CORNER_RADIUS];
-			NSGradient *background = [[[NSGradient alloc] initWithStartingColor:[NSColor colorWithCalibratedRed:0.414f green:0.446f blue:0.816f alpha:1.0f] 
-																	endingColor:[NSColor colorWithCalibratedRed:0.636f green:0.728f blue:0.978f alpha:1.0f]] autorelease];
+//			NSGradient *background = [[[NSGradient alloc] initWithStartingColor:[NSColor colorWithCalibratedRed:0.414f green:0.446f blue:0.816f alpha:1.0f] 
+//																	endingColor:[NSColor colorWithCalibratedRed:0.636f green:0.728f blue:0.978f alpha:1.0f]] autorelease];
+			NSGradient *background = [[[NSGradient alloc] initWithStartingColor:[NSColor colorWithCalibratedRed:0.35f green:0.5f blue:0.85f alpha:1.0f] 
+																	endingColor:[NSColor colorWithCalibratedRed:0.65f green:0.75f blue:1.0f alpha:1.0f]] autorelease];
 
 			[background drawInBezierPath:borderPath angle:90.0f];
 			
@@ -140,9 +144,9 @@
 			dest.y = NSHeight(cellFrame) * 0.8;
 			[statusMark moveToPoint:origin];
 			[statusMark lineToPoint:dest];
-			[statusMark setLineWidth:1.0];
-			//[[NSColor colorWithCalibratedWhite:0.5f alpha:1.0f] set];
-			[[NSColor whiteColor] set];
+			[statusMark setLineWidth:2.0];
+			[[NSColor colorWithCalibratedWhite:1.0f alpha:1.0f] set];
+			//[[NSColor whiteColor] set];
 			[statusMark stroke];
 			
 			
@@ -156,7 +160,8 @@
 			//Draw the background, then the frame.
 			NSBezierPath *borderPath = [NSBezierPath bezierPathWithRoundedRect:cellFrame xRadius:FRAME_CORNER_RADIUS yRadius:FRAME_CORNER_RADIUS];
 			
-			NSGradient *background = [[[NSGradient alloc] initWithStartingColor:[NSColor colorWithCalibratedWhite:0.8f alpha:1.0f] endingColor:[NSColor colorWithCalibratedWhite:0.5f alpha:1.0f]] autorelease];
+			NSGradient *background = [[[NSGradient alloc] initWithStartingColor:[NSColor colorWithCalibratedWhite:NSOFFSTATE_BACKGROUND_GRADIENT_MAX_WHITE alpha:1.0f] 
+																	endingColor:[NSColor colorWithCalibratedWhite:NSOFFSTATE_BACKGROUND_GRADIENT_MIN_WHITE alpha:1.0f]] autorelease];
 			[background drawInBezierPath:borderPath angle:90.0f];
 			
 			[[NSColor colorWithCalibratedWhite:BORDER_WHITE alpha:1.0f] setStroke];
@@ -173,9 +178,9 @@
 												   radius:radius 
 											   startAngle:0 
 												 endAngle:360];
-			[statusMark setLineWidth:1.0];
-			//[[NSColor colorWithCalibratedWhite:0.5f alpha:1.0f] set];
-			[[NSColor whiteColor] set];
+			[statusMark setLineWidth:1.5];
+			[[NSColor colorWithCalibratedWhite:0.2f alpha:1.0f] set];
+			//[[NSColor whiteColor] set];
 			[statusMark stroke];
 			
 			// Draw the frame
