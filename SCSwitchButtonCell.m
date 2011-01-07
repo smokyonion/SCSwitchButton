@@ -172,7 +172,7 @@
 			NSPoint origin;
 			origin.x = NSWidth(cellFrame) * 0.7;
 			origin.y = NSHeight(cellFrame) * 0.5;
-			CGFloat radius = NSWidth(cellFrame) * 0.08;
+			CGFloat radius = NSHeight(cellFrame) * 0.28;
 			//[statusMark moveToPoint:origin]; // if you enable this it will draw the line inside the circle
 			[statusMark appendBezierPathWithArcWithCenter:origin 
 												   radius:radius 
