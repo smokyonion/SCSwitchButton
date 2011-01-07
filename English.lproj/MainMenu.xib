@@ -12,8 +12,8 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="372"/>
 			<integer value="29"/>
+			<integer value="541"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1425,6 +1425,28 @@
 								<int key="NSPeriodicInterval">25</int>
 							</object>
 						</object>
+						<object class="NSButton" id="791246843">
+							<reference key="NSNextResponder" ref="439893737"/>
+							<int key="NSvFlags">268</int>
+							<string key="NSFrame">{{57, 18}, {72, 44}}</string>
+							<reference key="NSSuperview" ref="439893737"/>
+							<bool key="NSEnabled">YES</bool>
+							<object class="NSButtonCell" key="NSCell" id="786133608">
+								<int key="NSCellFlags">-2080244224</int>
+								<int key="NSCellFlags2">0</int>
+								<string key="NSContents">Check</string>
+								<reference key="NSSupport" ref="826254098"/>
+								<reference key="NSControlView" ref="791246843"/>
+								<int key="NSButtonFlags">1211912703</int>
+								<int key="NSButtonFlags2">2</int>
+								<reference key="NSNormalImage" ref="75238127"/>
+								<reference key="NSAlternateImage" ref="190473453"/>
+								<string key="NSAlternateContents"/>
+								<string key="NSKeyEquivalent"/>
+								<int key="NSPeriodicDelay">200</int>
+								<int key="NSPeriodicInterval">25</int>
+							</object>
+						</object>
 					</object>
 					<string key="NSFrameSize">{184, 233}</string>
 					<reference key="NSSuperview"/>
@@ -2683,6 +2705,7 @@
 							<reference ref="551685529"/>
 							<reference ref="715755161"/>
 							<reference ref="360552212"/>
+							<reference ref="791246843"/>
 						</object>
 						<reference key="parent" ref="972006081"/>
 					</object>
@@ -3228,6 +3251,20 @@
 						<reference key="object" ref="735678110"/>
 						<reference key="parent" ref="360552212"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">541</int>
+						<reference key="object" ref="791246843"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="786133608"/>
+						</object>
+						<reference key="parent" ref="439893737"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">542</int>
+						<reference key="object" ref="786133608"/>
+						<reference key="parent" ref="791246843"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -3464,6 +3501,11 @@
 					<string>539.IBPluginDependency</string>
 					<string>540.CustomClassName</string>
 					<string>540.IBPluginDependency</string>
+					<string>541.CustomClassName</string>
+					<string>541.IBPluginDependency</string>
+					<string>541.IBViewBoundsToFrameTransform</string>
+					<string>542.CustomClassName</string>
+					<string>542.IBPluginDependency</string>
 					<string>56.IBPluginDependency</string>
 					<string>56.ImportedFromIB2</string>
 					<string>57.IBEditorWindowLastContentRect</string>
@@ -3735,6 +3777,13 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>SCSwitchButtonCell</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>SCSwitchButton</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">P4AAAL+AAABCMAAAwnAAAA</bytes>
+					</object>
+					<string>SCSwitchButtonCell</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
 					<string>{{286, 129}, {275, 183}}</string>
@@ -3787,7 +3836,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">540</int>
+			<int key="maxID">542</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
