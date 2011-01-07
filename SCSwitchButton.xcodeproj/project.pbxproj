@@ -14,6 +14,7 @@
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		BF0F9D4E12D6A57D006AE993 /* SCSwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0F9D4D12D6A57D006AE993 /* SCSwitchButton.m */; };
 		BF0F9D5112D6A58A006AE993 /* SCSwitchButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0F9D5012D6A58A006AE993 /* SCSwitchButtonCell.m */; };
+		BFFEB85312D6BAC300188527 /* NSColor+SCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFEB85212D6BAC300188527 /* NSColor+SCAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		BF0F9D4D12D6A57D006AE993 /* SCSwitchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCSwitchButton.m; sourceTree = "<group>"; };
 		BF0F9D4F12D6A58A006AE993 /* SCSwitchButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSwitchButtonCell.h; sourceTree = "<group>"; };
 		BF0F9D5012D6A58A006AE993 /* SCSwitchButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCSwitchButtonCell.m; sourceTree = "<group>"; };
+		BFFEB85112D6BAC300188527 /* NSColor+SCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+SCAdditions.h"; sourceTree = "<group>"; };
+		BFFEB85212D6BAC300188527 /* NSColor+SCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+SCAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,8 @@
 				BF0F9D4D12D6A57D006AE993 /* SCSwitchButton.m */,
 				BF0F9D4F12D6A58A006AE993 /* SCSwitchButtonCell.h */,
 				BF0F9D5012D6A58A006AE993 /* SCSwitchButtonCell.m */,
+				BFFEB85112D6BAC300188527 /* NSColor+SCAdditions.h */,
+				BFFEB85212D6BAC300188527 /* NSColor+SCAdditions.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 				256AC3DA0F4B6AC300CF3369 /* SCSwitchButtonAppDelegate.m in Sources */,
 				BF0F9D4E12D6A57D006AE993 /* SCSwitchButton.m in Sources */,
 				BF0F9D5112D6A58A006AE993 /* SCSwitchButtonCell.m in Sources */,
+				BFFEB85312D6BAC300188527 /* NSColor+SCAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

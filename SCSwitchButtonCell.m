@@ -7,7 +7,7 @@
 //
 
 #import "SCSwitchButtonCell.h"
-
+#import "NSColor+SCAdditions.h"
 
 #define THUMB_WIDTH_FRACTION 0.45f
 #define THUMB_CORNER_RADIUS 3.0f
@@ -103,22 +103,33 @@
 	CGContextRef quartzContext = [context graphicsPort];
 	CGContextBeginTransparencyLayer(quartzContext, /*auxInfo*/ NULL);
 	
-	//Draw the background, then the frame.
-	NSBezierPath *borderPath = [NSBezierPath bezierPathWithRoundedRect:cellFrame xRadius:FRAME_CORNER_RADIUS yRadius:FRAME_CORNER_RADIUS];
-	
-	NSGradient *background = [[[NSGradient alloc] initWithStartingColor:[NSColor colorWithCalibratedWhite:0.8f alpha:1.0f] endingColor:[NSColor colorWithCalibratedWhite:0.5f alpha:1.0f]] autorelease];
-	[background drawInBezierPath:borderPath angle:90.0f];
-	
-	[[NSColor colorWithCalibratedWhite:BORDER_WHITE alpha:1.0f] setStroke];
-	[borderPath stroke];
-	
-	// Draw the frame
-	[self drawInteriorWithFrame:cellFrame inView:controlView];
+//	//Draw the background, then the frame.
+//	NSBezierPath *borderPath = [NSBezierPath bezierPathWithRoundedRect:cellFrame xRadius:FRAME_CORNER_RADIUS yRadius:FRAME_CORNER_RADIUS];
+//	
+//	NSGradient *background = [[[NSGradient alloc] initWithStartingColor:[NSColor colorWithCalibratedWhite:0.8f alpha:1.0f] endingColor:[NSColor colorWithCalibratedWhite:0.5f alpha:1.0f]] autorelease];
+//	[background drawInBezierPath:borderPath angle:90.0f];
+//	
+//	[[NSColor colorWithCalibratedWhite:BORDER_WHITE alpha:1.0f] setStroke];
+//	[borderPath stroke];
+//	
+//	// Draw the frame
+//	[self drawInteriorWithFrame:cellFrame inView:controlView];
 	
 	// Draw a symbol for users to easily tell the state of the button
 	switch ([self state]) {
 		case NSOnState:
 		{	
+			
+			//Draw the background, then the frame.
+			NSBezierPath *borderPath = [NSBezierPath bezierPathWithRoundedRect:cellFrame xRadius:FRAME_CORNER_RADIUS yRadius:FRAME_CORNER_RADIUS];
+			NSGradient *background = [[[NSGradient alloc] initWithStartingColor:[NSColor colorWithCalibratedRed:0.414f green:0.446f blue:0.816f alpha:1.0f] 
+																	endingColor:[NSColor colorWithCalibratedRed:0.636f green:0.728f blue:0.978f alpha:1.0f]] autorelease];
+
+			[background drawInBezierPath:borderPath angle:90.0f];
+			
+			[[NSColor colorWithCalibratedWhite:BORDER_WHITE alpha:1.0f] setStroke];
+			[borderPath stroke];
+			
 			// Draw status mark ( | )
 			NSBezierPath *statusMark = [NSBezierPath bezierPath];
 			NSPoint origin;
@@ -134,10 +145,23 @@
 			[[NSColor whiteColor] set];
 			[statusMark stroke];
 			
+			
+			// Draw the frame
+			[self drawInteriorWithFrame:cellFrame inView:controlView];
+			
 			break;
 		}
 		case NSOffState:
 		{	
+			//Draw the background, then the frame.
+			NSBezierPath *borderPath = [NSBezierPath bezierPathWithRoundedRect:cellFrame xRadius:FRAME_CORNER_RADIUS yRadius:FRAME_CORNER_RADIUS];
+			
+			NSGradient *background = [[[NSGradient alloc] initWithStartingColor:[NSColor colorWithCalibratedWhite:0.8f alpha:1.0f] endingColor:[NSColor colorWithCalibratedWhite:0.5f alpha:1.0f]] autorelease];
+			[background drawInBezierPath:borderPath angle:90.0f];
+			
+			[[NSColor colorWithCalibratedWhite:BORDER_WHITE alpha:1.0f] setStroke];
+			[borderPath stroke];
+			
 			// Draw status mark ( O )
 			NSBezierPath *statusMark = [NSBezierPath bezierPath];
 			NSPoint origin;
@@ -154,10 +178,27 @@
 			[[NSColor whiteColor] set];
 			[statusMark stroke];
 			
+			// Draw the frame
+			[self drawInteriorWithFrame:cellFrame inView:controlView];
+			
 			break;
 		}
 		default: // NSMixedState 
+		{
+			//Draw the background, then the frame.
+			NSBezierPath *borderPath = [NSBezierPath bezierPathWithRoundedRect:cellFrame xRadius:FRAME_CORNER_RADIUS yRadius:FRAME_CORNER_RADIUS];
+			
+			NSGradient *background = [[[NSGradient alloc] initWithStartingColor:[NSColor colorWithCalibratedWhite:0.8f alpha:1.0f] endingColor:[NSColor colorWithCalibratedWhite:0.5f alpha:1.0f]] autorelease];
+			[background drawInBezierPath:borderPath angle:90.0f];
+			
+			[[NSColor colorWithCalibratedWhite:BORDER_WHITE alpha:1.0f] setStroke];
+			[borderPath stroke];
+			
+			// Draw the frame
+			[self drawInteriorWithFrame:cellFrame inView:controlView];
 			break;
+			
+		}
 	}
 	
 	//Draw diabled status
