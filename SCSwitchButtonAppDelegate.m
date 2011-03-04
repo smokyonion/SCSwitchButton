@@ -7,6 +7,7 @@
 //
 
 #import "SCSwitchButtonAppDelegate.h"
+#import "SCSwitchButton.h"
 
 @implementation SCSwitchButtonAppDelegate
 
@@ -14,6 +15,22 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	// Insert code here to initialize your application 
+}
+
+- (IBAction)switchStatus:(id)sender
+{
+	if ([sender isKindOfClass:[SCSwitchButton class]]) {
+		switch ([sender state]) {
+			case NSOffState:
+				[sender setState:NSOnState];
+				break;
+			case NSOnState:
+				[sender setState:NSOffState];
+				break;
+			default: //NSMixedState
+				break;
+		}
+	}
 }
 
 @end
